@@ -17,10 +17,12 @@ const unitConfig = {
             meter: 1,
             centimeter: 0.01,
             millimeter: 0.001,
+            nanometer: 0.000000001,
             inch: 0.0254,
             foot: 0.3048,
             yard: 0.9144,
-            mile: 1609.344
+            mile: 1609.344,
+            lightyear: 9.461e+15
         }
     },
     volume: {
