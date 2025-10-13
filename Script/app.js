@@ -46,7 +46,9 @@ const unitConfig = {
             milligram: 0.000001,
             pound: 0.453592,
             ounce: 0.0283495,
-            stevenHawking: 158.7572
+            stevenHawking: 158.7572,
+            zuko: 6.80389,
+            transistor: 0.0000000000001766
         }
     },
     storage: {
