@@ -131,7 +131,7 @@ Follow the steps below to run a local copy of the project.
 Download or clone the repository:
 
 ```bash
-git clone https://github.com/calen/unit-conversion-app.git
+git clone https://github.com/Calen-Ray/unit-conversion-tool
 ```
 
 Move into the project directory:
