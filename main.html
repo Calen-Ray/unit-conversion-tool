@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        The <head> contains the document metadata and resource links.
+        We keep the markup lean and rely on CSS and JavaScript files
+        to hold the bulk of styling and logic so the HTML stays readable.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion Tool</title>
+    <!-- Primary stylesheet that defines the color palette, layout grid, and component styling -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!--
+        Header: shows the logo and project title. The header doubles as a quick brand banner
+        and uses flexbox (see style.css) to keep the logo and text aligned side-by-side.
+    -->
+    <header class="app-header">
+        <img src="Images/crappy_filler_logo.png" alt="Unit Conversion Tool logo" class="logo">
+        <div>
+            <h1>Unit Conversion Tool</h1>
+            <p class="tagline">Convert common units quickly with this simple interface.</p>
+        </div>
+    </header>
+
+    <!--
+        Main content area: composed of two cards laid out with CSS grid.
+        The first card houses the form controls, the second card is a live result readout.
+    -->
+    <main class="app-main">
+        <!-- Conversion form card -->
+        <section class="card">
+            <h2>Convert a Value</h2>
+            <!--
+                The form captures the category (length, temperature, etc.), numeric value,
+                and origin/destination units. Submit triggers conversion while the reset button
+                clears form state and reinitialises unit options.
+            -->
+            <form id="conversion-form" class="conversion-form">
+                <!-- Category selector: determines which unit list is populated in the dropdowns -->
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="length" selected>Length</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="volume">Volume</option>
+                        <option value="mass">Mass</option>
+                        <option value="storage">Digital Storage</option>
+                    </select>
+                </div>
+
+                <!-- Numeric input: accepts the source quantity the user wants to convert -->
+                <div class="form-group">
+                    <label for="input-value">Value</label>
+                    <input type="number" id="input-value" name="input-value" placeholder="Enter a number" required>
+                </div>
+
+                <!-- Origin and target unit dropdowns are populated dynamically in app.js -->
+                <div class="form-group">
+                    <label for="from-unit">From</label>
+                    <select id="from-unit" name="from-unit"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="to-unit">To</label>
+                    <select id="to-unit" name="to-unit"></select>
+                </div>
+
+                <!-- Form action buttons: primary for conversion, secondary for resetting -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Convert</button>
+                    <button type="button" id="reset-button" class="btn-secondary">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Result card summarises the most recent conversion and updates via aria-live for accessibility -->
+        <section class="card result-card">
+            <h2>Result</h2>
+            <output id="conversion-result" aria-live="polite">Enter a value above to see the conversion.</output>
+        </section>
+    </main>
+
+    <!--
+        Footer keeps metadata out of the main visual flow but present on the page.
+        The current year is injected at runtime (see app.js initialise routine).
+    -->
+    <footer class="app-footer">
+        <small>&copy; <span id="year"></span> Unit Conversion Tool. All conversions are approximate.</small>
+    </footer>
+
+    <!--
+        JavaScript bootstraps the unit configuration, populates dropdowns, and handles conversions.
+        See Script/app.js for detailed documentation.
+    -->
+    <script src="Script/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+:root {
+    /* Centralised palette built from the provided swatches */
+    --color-ink: #2d232e;          /* Deep eggplant used for primary text to preserve contrast */
+    --color-ink-soft: #474448;     /* Softer slate for supporting labels and strokes */
+    --color-surface: #f1f0ea;      /* Light neutral surface used for overall background */
+    --color-surface-alt: #e0ddcf;  /* Warmer neutral for gradient depth */
+    --color-accent: #534b52;       /* Rich mauve accent applied to the header/footer */
+    --color-highlight: #474448;    /* Anchor tone for interactive elements (buttons/focus) */
+    --font-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Accessible sans-serif stack */
+}
+
+/* Establish predictable sizing and avoid unexpected padding/margin interactions */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-base);
+    /* Gentle top-to-bottom gradient to prevent the large background from feeling flat */
+    background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-alt) 100%);
+    color: var(--color-ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    /* Horizontal flex layout keeps logo and headings aligned without extra wrappers */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 8vw;
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    box-shadow: 0 2px 10px rgba(45, 35, 46, 0.25); /* Subtle elevation separating header from main content */
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.04em; /* Slight tracking to give the title a more polished feel */
+}
+
+.tagline {
+    margin: 0.25rem 0 0;
+    color: var(--color-surface);
+    opacity: 0.85; /* Keep the tagline readable but subordinate to the main title */
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    border: 2px solid var(--color-surface); /* Light frame makes the placeholder logo feel intentional */
+    object-fit: cover;
+}
+
+.app-main {
+    flex: 1;
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 8vw 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Auto-fit ensures the cards stack on narrow screens but sit side-by-side on wider viewports */
+}
+
+.card {
+    background-color: rgba(241, 240, 234, 0.85); /* Semi-transparent to let the gradient subtly show through */
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 12px 24px rgba(71, 68, 72, 0.15);
+    border: 1px solid rgba(83, 75, 82, 0.1);
+    backdrop-filter: blur(4px); /* Adds a soft glassmorphism effect for modern feel */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--color-highlight);
+    letter-spacing: 0.06em;
+}
+
+.conversion-form {
+    display: grid;
+    gap: 1.5rem; /* Larger gap improves scanability between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: var(--color-ink-soft);
+}
+
+select,
+input[type="number"] {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(45, 35, 46, 0.2);
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth interaction feedback */
+}
+
+select:focus,
+input[type="number"]:focus {
+    border-color: var(--color-highlight);
+    box-shadow: 0 0 0 3px rgba(71, 68, 72, 0.15);
+    outline: none; /* Remove default outline in favour of the custom focus ring above */
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allows buttons to stack gracefully on narrow widths */
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    min-width: 140px;
+    padding: 0.85rem 1rem;
+    border-radius: 999px; /* Pill shape gives the CTA a friendly, tactile feel */
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-highlight);
+    color: var(--color-surface);
+    box-shadow: 0 8px 16px rgba(71, 68, 72, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-highlight);
+    border: 2px solid var(--color-highlight);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(71, 68, 72, 0.2);
+}
+
+.result-card output {
+    display: block;
+    min-height: 3rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(224, 221, 207, 0.65);
+    border: 1px dashed rgba(45, 35, 46, 0.25);
+    color: var(--color-ink);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    /* Output area keeps prior conversions visible without relying on additional markup */
+}
+
+.app-footer {
+    text-align: center;
+    padding: 1rem 8vw 1.5rem;
+    background-color: rgba(83, 75, 82, 0.8);
+    color: var(--color-surface);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .app-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
