@@ -23,7 +23,12 @@ const unitConfig = {
             yard: 0.9144,
             mile: 1609.344,
             lightyear: 9.461e+15,
-            cubit: 0.4572
+            cubit: 0.4572,
+            'danny deVito': 1.47,
+            'tantive IV': 126,
+            'imperial-class Star Destroyer': 1600,
+            'football Field': 109.728,
+            'dominos Large Pizza': 0.3556
         }
     },
     volume: {
@@ -37,7 +42,8 @@ const unitConfig = {
             pint: 0.473176,
             cup: 0.24,
             ounce: 0.0295735,
-            'noggin/Gill': 0.25 * 0.473176
+            'noggin/Gill': 0.25 * 0.473176,
+            'dominos Large Pizza': 0.88
         }
     },
     mass: {
@@ -57,7 +63,8 @@ const unitConfig = {
             'average Newborn Elephant Calf': 90,
             'danny Devito': 88,
             'tantive IV': 105000,
-            'imperial-class Star Destroyer': 40000000000
+            'imperial-class Star Destroyer': 40000000000,
+            'dominos Large Pizza': 1.6
         }
     },
     storage: {
