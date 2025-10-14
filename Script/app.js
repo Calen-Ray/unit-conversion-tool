@@ -50,7 +50,9 @@ const unitConfig = {
             ounce: 0.0283495,
             stevenHawking: 158.7572,
             zuko: 6.80389,
-            transistor: 0.0000000000001766
+            transistor: 0.0000000000001766,
+            cookie: 5.120923,
+            felix: 6.644301
         }
     },
     storage: {
