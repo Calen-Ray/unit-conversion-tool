@@ -59,6 +59,8 @@ const unitConfig = {
             stevenHawking: 158.7572,
             zuko: 6.80389,
             transistor: 0.0000000000001766,
+            cookie: 5.120923,
+            felix: 6.644301
             stone: 0.157473,
             'average Newborn Elephant Calf': 90,
             'danny Devito': 88,
