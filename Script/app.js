@@ -22,7 +22,8 @@ const unitConfig = {
             foot: 0.3048,
             yard: 0.9144,
             mile: 1609.344,
-            lightyear: 9.461e+15
+            lightyear: 9.461e+15,
+            cubit: 0.4572
         }
     },
     volume: {
@@ -35,7 +36,8 @@ const unitConfig = {
             quart: 0.946353,
             pint: 0.473176,
             cup: 0.24,
-            ounce: 0.0295735
+            ounce: 0.0295735,
+            'noggin/Gill': 0.25 * 0.473176
         }
     },
     mass: {
@@ -50,7 +52,12 @@ const unitConfig = {
             ounce: 0.0283495,
             stevenHawking: 158.7572,
             zuko: 6.80389,
-            transistor: 0.0000000000001766
+            transistor: 0.0000000000001766,
+            stone: 0.157473,
+            'average Newborn Elephant Calf': 90,
+            'danny Devito': 88,
+            'tantive IV': 105000,
+            'imperial-class Star Destroyer': 40000000000
         }
     },
     storage: {
@@ -62,7 +69,8 @@ const unitConfig = {
             kilobyte: 1024,
             megabyte: 1024 ** 2,
             gigabyte: 1024 ** 3,
-            terabyte: 1024 ** 4
+            terabyte: 1024 ** 4,
+            petabyte: 1024 ** 5
         }
     },
     temperature: {
