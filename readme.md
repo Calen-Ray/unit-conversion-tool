@@ -229,9 +229,11 @@ Please read the [Code of Conduct](https://www.contributor-covenant.org/version/2
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- Contact -->
-## :handshake: Contact
+## :handshake: Contact & Primary Contributors
 
 Calen - [@calen_dev](https://github.com/Calen-Ray)
+Austin - [@calen_dev](https://github.com/Austin-Marlatt)
+TriangularApathy - [@calen_dev](https://github.com/TriangularApathy)
 
 Project Link: [https://github.com/Calen-Ray/unit-conversion-tool](https://github.com/Calen-Ray/unit-conversion-tool)
 
