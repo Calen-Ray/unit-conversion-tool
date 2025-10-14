@@ -96,6 +96,20 @@ const unitConfig = {
                 fromBase: value => value + 273.15
             }
         }
+    },
+    money: {
+        base: "dollar",
+        label: "Money",
+        units: {
+            dollar: 1,
+            'half dollar': 0.5,
+            quarter: 0.25,
+            dime: 0.1,
+            nickel: 0.05,
+            penny: 0.01,
+            'dominos large any topping deal': 9.99,
+            'average cost of u.s. childbirth': 18865
+        }
     }
 };
 
