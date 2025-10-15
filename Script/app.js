@@ -62,6 +62,7 @@ const unitConfig = {
             cookie: 5.120923,
             felix: 6.644301,
             stone: 0.157473,
+            'Vogue Magazine - February, 2003': 0.358,
             'average Newborn Elephant Calf': 90,
             'danny Devito': 88,
             'tantive IV': 105000,
